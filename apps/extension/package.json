@@ -1,0 +1,29 @@
+{
+  "name": "@bugreplay/extension",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build && vite build --config vite.recorder.config.ts && vite build --config vite.bridge.config.ts",
+    "dev": "vite build --config vite.recorder.config.ts --watch",
+    "test": "vitest run --passWithNoTests",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@bugreplay/browser": "workspace:*",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "@bugreplay/recorder-core": "workspace:*",
+    "@bugreplay/trace-format": "workspace:*",
+    "@bugreplay/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.5.2",
+    "vite": "^6.3.5",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4",
+    "@types/chrome": "^0.0.329",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6"
+  }
+}

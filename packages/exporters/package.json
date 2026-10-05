@@ -1,0 +1,1 @@
+{"name":"@bugreplay/exporters","version":"1.0.0","type":"module","exports":"./src/index.ts","scripts":{"build":"tsc -p tsconfig.json","test":"vitest run --passWithNoTests","typecheck":"tsc -p tsconfig.json --noEmit"},"dependencies":{"@bugreplay/shared":"workspace:*"},"devDependencies":{"typescript":"^5.8.3","vitest":"^3.2.4"}}

@@ -1,0 +1,28 @@
+{
+  "name": "@bugreplay/cli",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "bugreplay": "dist/index.js"
+  },
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run --passWithNoTests",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@bugreplay/trace-format": "workspace:*",
+    "@bugreplay/replay-engine": "workspace:*",
+    "@bugreplay/exporters": "workspace:*",
+    "@playwright/test": "^1.53.1",
+    "tsx": "^4.20.3",
+    "@bugreplay/redaction": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4",
+    "@types/node": "^22.15.30"
+  }
+}

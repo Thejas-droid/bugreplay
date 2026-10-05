@@ -1,0 +1,30 @@
+{
+  "name": "@bugreplay/viewer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vite build --config vite.server.config.ts",
+    "start": "node server-dist/server.js",
+    "test": "vitest run --passWithNoTests",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@bugreplay/shared": "workspace:*",
+    "@bugreplay/trace-format": "workspace:*",
+    "@bugreplay/exporters": "workspace:*",
+    "@tanstack/react-virtual": "^3.13.12",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "@bugreplay/replay-engine": "workspace:*"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.5.2",
+    "vite": "^6.3.5",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6"
+  }
+}

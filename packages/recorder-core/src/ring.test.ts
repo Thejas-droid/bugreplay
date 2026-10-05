@@ -1,0 +1,1 @@
+import {it,expect} from "vitest";import {RingBuffer} from "./index";it("evicts old entries",()=>{const b=new RingBuffer<any>(10,100000);b.push({timestamp:0,a:1});b.push({timestamp:20,a:2});expect(b.values()).toHaveLength(1)});

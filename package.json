@@ -1,0 +1,29 @@
+{
+  "name": "bugreplay",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.12.1",
+  "scripts": {
+    "build": "turbo build",
+    "test": "turbo test",
+    "dev": "pnpm -r --parallel --filter @bugreplay/demo-app --filter @bugreplay/viewer run dev",
+    "typecheck": "turbo typecheck",
+    "lint": "turbo lint",
+    "demo": "pnpm --filter @bugreplay/demo-app dev",
+    "viewer": "pnpm --filter @bugreplay/viewer dev",
+    "local:build": "pnpm --filter @bugreplay/extension build && pnpm --filter @bugreplay/viewer build",
+    "local:start": "pnpm --filter @bugreplay/viewer start",
+    "test:extension": "pnpm --filter @bugreplay/cli exec tsx ../../scripts/extension-smoke.ts",
+    "cli": "pnpm --filter @bugreplay/cli start",
+    "preinstall": "node scripts/check-package-manager.cjs"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.6",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4",
+    "@types/node": "^22.15.30"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
